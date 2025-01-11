@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>제목-어떤 웹사이트를 만들면 좋을까?</title>
+        <style>
+            table {
+                border: 10px solid #ddd; /* 테두리 스타일 */
+                padding: 12px 20px; /* 셀 안의 여백 */
+                text-align: center; /* 가운데 정렬 */
+                font-size: 30px; /* 글자 크기 */
+                width:100%;
+                height:auto;
+            }
+            td {
+                border:3px solid #ddd;;
+                width:30%;
+            }
+            img {
+                width:50px;
+                height:50px;
+            }
+
+            .dropdown-content{
+                display:none
+            }
+            
+            button {
+                width:100%;
+                background-color: white; /* 배경색: 초록색 */
+                color: black; /* 글자색: 흰색 */
+                border-radius: 6px; /* 둥근 정도: 12px */
+                font-size: 16px; /* 폰트 크기: 16px */
+                font-style:italic;
+                cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+                transition: background-color 0.3s, border-color 0.3s; /* 호버 시 배경색과 테두리 색상 변화 */
+            }
+    
+            .button_google:hover {
+                background-color: #ff6565; 
+                border-color: #3e8e41;
+            }
+
+            .button_apple:hover {
+                background-color: #b2b2b2; 
+                border-color: #3e8e41;
+            }
+
+            .button_naver:hover {
+                background-color: #45a049; 
+                border-color: #3e8e41;
+            }
+    
+            button:focus {
+                outline: none; 
+                box-shadow: 0 0 5px #45a049; 
+            }
+            
+
+            .div_image{
+                border:2px solid gray;
+                justify-content: center; 
+                align-items: center;  
+                width:100%
+
+            }
+            .div_link{
+                border:2px solid goldenrod;
+            }
+            a{
+                text-decoration: none;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+                color:black;
+                border:1px solid black;
+                border-radius: 5px;
+                padding: 5px;
+                font-size:15px;
+                font-style:italic;
+                transition: background-color 0.3s;
+            }
+            a:hover{
+                background-color: #a9a9a9; /* 호버 시 배경색 변경 (어두운 회색) */
+            }
+            .dropdown-content{
+                border: 10px solid #ddd;
+                font-size: 20px;
+                font-style:italic;
+            }
+            .link_img {
+                width:20px;
+                height:20px;
+            } 
+            .div_button{
+                border-color: antiquewhite;
+            }
+            p {
+                text-align: left;
+            }
+
+            #google-description {
+                background-color: #ff6565;
+            }
+
+            #apple-description{
+                background-color: #b2b2b2; 
+            }            
+
+            #naver-description{
+                background-color: #45a049;
+            }   
+            
+            .div_history {
+                padding:20px;
+                padding-top:10px;
+                margin:5px;
+                border-radius: 3px;
+                border: 3px solid #000000;
+            }
+
+            .div_jobs {
+                padding:20px;
+                padding-top:10px;
+                margin:5px;
+                border-radius: 3px;
+                border: 3px solid #000000;
+            }
+            
+            .div_services {
+                padding:20px;
+                padding-top:10px;
+                margin:5px;
+                border-radius: 3px;
+                border: 3px solid #000000;
+            }
+
+            .div_serviceImg{
+                display: flex;
+                justify-content: flex-start;
+            }
+            .a_serviceImg{
+                border: 3px solid #000000;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="font-size : 36px;">사이트 찾아보기</h1>
+        <table>
+            <tr>
+                <td>
+                    <div class="div_image">
+                        <img src="C:\Users\KMB\Desktop\성윤_코딩\google_img.png"></img>
+                    </div>
+                    <div class="div_button"><button class="button_google" onclick="toggleDropdown('google-description')">About Google...</button></div>
+                    <div class="div_link"><a  target='_blank' href="https://www.google.com/"><img class='link_img' src="C:\Users\KMB\Desktop\성윤_코딩\link_img.png"></img><small>Go to Google Website</small></a></div>
+                    
+                </td>
+                <td>
+                    <div class="div_image">
+                        <img src="C:\Users\KMB\Desktop\성윤_코딩\apple_img.png"></img>
+                    </div>
+                    <div class="div_button"><button class="button_apple" onclick="toggleDropdown('apple-description')">About Apple...</button></div>
+                    <div class="div_link"><a target='_blank' href="https://www.apple.com/"><img class='link_img' src="C:\Users\KMB\Desktop\성윤_코딩\link_img.png"></img><small>Go to Apple Website</small></a></div>
+                    
+                </td>
+                <td>
+                    <div class="div_image">
+                        <img src="C:\Users\KMB\Desktop\성윤_코딩\naver_img.png"></img>
+                    </div>
+                    <div class="div_button"><button class="button_naver" onclick="toggleDropdown('naver-description')">About Naver...</button></div>
+                    <div class="div_link" ><a target='_blank' href="https://www.naver.com/"><img class='link_img'  src="C:\Users\KMB\Desktop\성윤_코딩\link_img.png"></img><small>Go to Naver Website</small></a></div>
+                    
+                </td>
+            </tr>
+        </table>
+        <div id="google-description" class="dropdown-content">
+            <div class="div_history">
+                <h3>Google's History</h3>
+                <p>Google was founded in 1998 by Larry Page and Sergey Brin, two Ph.D. students at Stanford University. They developed a search system called "Backrub" in an effort to improve search engine technology, which laid the foundation for Google. The name "Google" is derived from the term "googol," which represents 10 to the power of 100, symbolizing their intention to handle vast amounts of information.</p>
+                <p>In its early years, Google revolutionized the search engine industry and rapidly grew. In 2004, the company went public through an IPO. Following this, Google expanded its offerings with services such as Gmail, Google Maps, and YouTube, establishing itself as a global company.</p>
+                <p>In 2005, Google acquired Android and entered the mobile market. In 2015, Google restructured and established its parent company, Alphabet, to manage its various subsidiaries. Google generates massive revenue primarily through search advertising and has invested in innovative technologies like artificial intelligence, cloud computing, and autonomous vehicles. With the goal of "organizing the world's information and making it universally accessible and useful," Google continues to innovate.</p>    
+            </div>
+            <div class="div_jobs">
+                <h3>Google's Jobs</h3>
+                <ul>
+                    <li><strong>Engine Innovation</strong>: Google was founded in 1998 and introduced an innovative technology that improved existing search engines, providing fast and accurate search results.</li>
+                    <li><strong>Google Search</strong>: Google’s search engine revolutionized search by using the PageRank algorithm, which analyzes the importance of web pages to deliver more efficient results.</li>
+                    <li><strong>Gmail</strong>: In 2004, Google launched Gmail, offering significantly larger storage and improved functionality compared to existing email services, becoming hugely popular.</li>
+                    <li><strong>Google Maps</strong>: In 2005, Google introduced Google Maps, transforming map services by offering features like directions and real-time traffic information.</li>
+                    <li><strong>YouTube Acquisition</strong>: In 2006, Google acquired YouTube, the world’s largest video-sharing platform, dominating the video content industry.</li>
+                    <li><strong>Android Operating System</strong>: In 2005, Google acquired Android and entered the mobile market, which later became the world’s most widely used mobile OS.</li>
+                </ul>
+            </div>
+            <div class="div_services">
+                <h3>Google's Services</h3>
+                <div class="div_serviceImg">
+                    <a class='a_serviceImg' target='_blank' href="https://www.youtube.com/"><img src="C:\Users\KMB\Desktop\성윤_코딩\youtube_img.png"></img></a>
+                    <a class='a_serviceImg' target='_blank' href="https://www.google.com/intl/ko_kr/chrome/"><img src="C:\Users\KMB\Desktop\성윤_코딩\chrome_img.png"></img></a>
+                    <a class='a_serviceImg' target='_blank' href="https://www.google.co.kr/maps/"><img src="C:\Users\KMB\Desktop\성윤_코딩\googlemap_img.png"></img></a>
+                </div>
+            </div>
+            
+            
+        </div>
+        <div id="apple-description" class="dropdown-content">
+            <p>애플은 1976년에 설립된 미국의 글로벌 기술 기업으로, 주로 전자기기와 소프트웨어를 개발하는 회사입니다. 애플의 대표적인 제품으로는 아이폰, 아이패드, 맥북, 애플 워치 등이 있으며, 이들은 세계 시장에서 큰 인기를 얻고 있습니다. 애플은 혁신적인 디자인과 직관적인 사용자 인터페이스를 통해 소비자들에게 큰 영향을 미쳤습니다.</p>
+            <p> iOS 운영체제와 앱스토어는 모바일 생태계에서 중요한 역할을 하고 있으며, 앱 개발자들에게도 기회를 제공하고 있습니다. 애플은 하드웨어와 소프트웨어를 통합하여 뛰어난 사용자 경험을 제공하는 점에서 경쟁 우위를 가지고 있습니다. 또한, 애플은 클라우드 서비스인 iCloud와 스트리밍 서비스인 Apple Music을 통해 콘텐츠 생태계를 강화하고 있습니다. 애플의 보안과 개인 정보 보호에 대한 강력한 정책도 사용자들로부터 긍정적인 평가를 받고 있습니다.</p>
+            <p>애플은 지속적인 혁신을 통해 새로운 시장을 창출하고 있으며, 최근에는 자율주행차와 증강 현실 기술에도 투자를 확대하고 있습니다. 애플의 철학은 "최고의 기술로 사람들의 삶을 향상시키는 것"입니다.</p>
+        </div>
+        <div id="naver-description" class="dropdown-content">
+            <p>네이버는 1999년에 설립된 대한민국의 대표적인 검색 포털 사이트입니다. 네이버는 검색엔진을 중심으로 다양한 서비스를 제공하며, 한국 내에서 가장 많은 사용자를 보유한 검색 플랫폼입니다. </p>
+            <p>특히, 네이버는 블로그, 카페, 지식iN 등의 커뮤니티 기능을 강화하여 사용자들이 콘텐츠를 쉽게 생성하고 공유할 수 있도록 했습니다. 네이버는 웹툰, V LIVE, 네이버 뉴스 등의 서비스도 제공하며, 콘텐츠 시장에서도 큰 영향력을 미칩니다. </p>
+            <p>또한, 네이버는 스마트스토어를 통해 전자상거래 시장에서도 활발히 활동하고 있습니다. 네이버는 AI 기술을 적극적으로 도입하여 검색 결과를 더 정교하게 제공하고, 음성 인식 및 번역 기능을 개선해 나가고 있습니다. 네이버는 일본의 라인(LINE)을 운영하는 등, 해외 시장에도 진출하여 글로벌 경쟁력을 키우고 있습니다. 네이버의 검색 광고와 커머스 모델은 지속적으로 성장하고 있으며, 최근에는 클라우드와 AI 기술 개발에도 집중하고 있습니다. 네이버는 "사람 중심의 검색, 기술로 더 나은 세상 만들기"라는 비전을 가지고 있습니다.</p>
+        </div>
+
+        <script>
+            function toggleDropdown(id) {
+                var content = document.querySelectorAll('.dropdown-content');
+                
+                //모든 dropdown-content를 숨김
+                content.forEach(function(content) {
+                    if(content.id !== id) {
+                        content.style.display="none";
+                    }
+                })
+
+                var content = document.getElementById(id);
+                content.style.display=content.style.display==="block"?"none":"block";
+
+            }
+        </script>
+
+    </body>
+
+</html>
