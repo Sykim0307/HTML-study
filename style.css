@@ -73,6 +73,10 @@
                 width:50%;
                 height:50px;
             }
+            #header_bottom_center img{
+                border:3px #993fc9 solid;
+                margin-left:5px;
+            }
             #div_logo{
                 border:2px #149382 solid;
                 width:15%;
