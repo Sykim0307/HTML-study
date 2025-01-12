@@ -1,0 +1,99 @@
+            #wrap{
+                width:800px;
+                height:800px;
+                border: 3px rgb(255, 0, 0);
+            }
+            #header{
+                width:100%;
+                height:200px;    
+                border: 3px solid  #ef8585;
+            }
+            #header_top{
+                display:flex;
+                justify-content: space-between;
+                margin-left:6px;
+                width:98%;
+                border: 3px solid  #44bfe1;
+            }
+            .left-group, .right-group{
+                display:flex;
+            }
+            #container{
+                width:800px;
+                height:400px;
+                border: 3px solid #ef8585;
+            }
+            #footer{
+                width:800px;
+                height:200px;
+                border: 3px solid  #ef8585;
+            }
+            img{
+                width:25px;
+                height:25px;
+            }
+            
+            .left-group img, .right-group img{
+                width:50px;
+                height:auto;
+                border:2px solid #ccc;
+                border-radius:5px;
+            }
+            .left-group{
+                justify-content: flex-start;
+            }
+            .right-group{
+                justify-content: flex-end;
+            }
+            #header_mid{
+                display:flex;
+                justify-content: center;
+                margin-left:6px;
+                width:98%;
+                border:3px #ccc solid;
+            }
+            #header_bottom{
+                display:flex;
+                justify-content: center;
+                margin-left:6px;
+                width:98%;
+                border:3px #ccc solid;
+            }
+            #header_mid_center{
+                display:flex;
+                border:3px #993fc9 solid;
+                width:50%;
+                height:50px;
+                justify-content: center;
+                align-items: center;
+            }
+            #header_bottom_center{
+                display:flex;
+                border:3px #993fc9 solid;
+                width:50%;
+                height:50px;
+            }
+            #div_logo{
+                border:2px #149382 solid;
+                width:15%;
+                height:90%;
+            }
+            
+            #div_logo svg{
+                width:90%;
+                height:90%;
+                border:2px #d01be4 solid;
+            }
+            #div_input{
+                border:2px #dd2727 solid;
+                width:70%;
+                height:90%;
+            }
+            #div_input input{
+                width:95%;
+                height:30px;
+                margin-left:2.5px;
+                margin-top:3px;
+                border: 2px #4334EB solid;
+                border-radius: 5px;
+            }
